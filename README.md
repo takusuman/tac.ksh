@@ -4,7 +4,8 @@ An [unaware](#ok-but-why-it-is-unaware) KornShell 93 reimplementation of GNU cor
 
 ## Why?
 
-After I spent an unacceptable time programming in C, I decided
+After I spent an [unacceptable time programming
+in C](https://github.com/Projeto-Pindorama/heirloom-ng/pull/41), I decided
 to come back to the same old place, Sweet Old KornShell.  
 No, seriously, I had to invert a list of [git commit
 hashes](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects),
@@ -43,6 +44,7 @@ uses ``tac``, you can hack it out with something like this:
 ```sh
 tac() {
     if [ $# -lt 1 ]; then
+        # standard input
         tail -r
     else
         for file; do
@@ -53,8 +55,8 @@ tac() {
 }
 ```
 
-I personally think it is not really worth of using, since an actual
-large file could easily overflow KornShell 93's limit of 2²²-1 ~ 2²²
+I personally think it is not really worth of using, since an actually
+large file could easily overflow KornShell 93's limit of (2²² - 1) ~ 2²²
 elements on the buffer array and, although this does not appear to be
 an actual problem, I could also argue that the speed is not that great,
 since it would iterate two times.  
