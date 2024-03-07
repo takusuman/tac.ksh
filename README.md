@@ -1,6 +1,6 @@
 # tac.ksh
 
-An [unaware]() KornShell 93 reimplementation of GNU coreutils.
+An [unaware](#ok-but-why-it-is-unaware) KornShell 93 reimplementation of GNU coreutils.
 
 ## Why?
 
